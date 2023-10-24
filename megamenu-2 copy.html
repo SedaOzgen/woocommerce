@@ -23,11 +23,13 @@
       .nav-item {
         padding: 20px;
       }
-      .dropdown:hover .dropdown-menu {
+      .dropdown:hover .test {
         display: block;
-        width: 100%;
+        width: 100% !important;
+        height: 400px;
         position: absolute;
-        left: 0;
+        left: 0 !important;
+        right: auto !important;
       }
 
       .dropdown-menu ul {
@@ -63,9 +65,9 @@
       .dropdown-menu {
         border: none;
         border-radius: 0;
-        position: absolute;
+        /* position: absolute; */
         background-color: #f9f9f9;
-        width: 100%;
+        width: 100% !important;
         left: 0;
         z-index: 1000;
         overflow: hidden;
@@ -93,6 +95,12 @@
           display: flex;
         }
       } */
+
+      .test {
+        display: block;
+        background-color: red;
+        position: absolute;
+      }
     </style>
   </head>
 
@@ -127,30 +135,24 @@
               >
                 Sell
               </a>
+              <div class="test">
+                <div class="row">
+                  <div class="col">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Quisquam delectus earum maiores! Nulla harum rerum aperiam
+                    rem quasi facilis dicta, aut in necessitatibus at totam
+                    debitis iusto inventore laudantium dolorem!
+                  </div>
+                </div>
+              </div>
               <div class="dropdown-menu">
-                <div class="dropdown-menu-item" style="width: 18rem">
-                  <h5>Woo For Merchants</h5>
-
-                  <p class="text-muted">
-                    Woo Express offers everything you need to launch a store in
-                    days and keep it growing for years
-                  </p>
-                </div>
-                <div class="dropdown-menu-item" style="width: 18rem">
-                  <h5>Woo For Merchants</h5>
-
-                  <p class="text-muted">
-                    Woo Express offers everything you need to launch a store in
-                    days and keep it growing for years
-                  </p>
-                </div>
-                <div class="dropdown-menu-item" style="width: 18rem">
-                  <h5>Woo For Merchants</h5>
-
-                  <p class="text-muted">
-                    Woo Express offers everything you need to launch a store in
-                    days and keep it growing for years
-                  </p>
+                <div class="row">
+                  <div class="col">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Quisquam delectus earum maiores! Nulla harum rerum aperiam
+                    rem quasi facilis dicta, aut in necessitatibus at totam
+                    debitis iusto inventore laudantium dolorem!
+                  </div>
                 </div>
               </div>
             </li>
@@ -214,7 +216,16 @@
         </div>
       </div>
     </nav>
-
+    <div class="test">
+      <div class="row">
+        <div class="col">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam
+          delectus earum maiores! Nulla harum rerum aperiam rem quasi facilis
+          dicta, aut in necessitatibus at totam debitis iusto inventore
+          laudantium dolorem!
+        </div>
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
       integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
