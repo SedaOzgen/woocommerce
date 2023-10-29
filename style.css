@@ -141,7 +141,18 @@
    display: none;
    /* making it hidden by default */
  }
+ .quata {
+  font-size: 2em;
+    font-weight: 400;
+    font-family: proxima-nova, sans-serif;
+        color: #2C3338;
+          text-align: center;
+ }
 
+ .tryWooExpress {
+      background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(231, 227, 255) 100%);
+      
+ }
  /* ============ desktop view ============ */
  @media all and (min-width: 992px) {
    .navbar .has-megamenu {
