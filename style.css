@@ -31,6 +31,12 @@
    font-size: 0.875em;
    display: block;
  }
+ .mega-menu-item a  {
+   text-decoration: none;
+   color: black;
+ }
+ 
+
 
  .mega-menu-item:hover {
    background-color: #fafafaf7;
@@ -66,13 +72,24 @@
 
    background: linear-gradient(#f2edff80, #ffffff);
  }
+ .header2 {
+   padding-top: 120px;
 
- .tryBtn {
-   background: #674399;
-   color: #fff !important;
+    background: linear-gradient(180deg, rgba(242, 237, 255, 0.5) 0%, rgba(242, 237, 255, 0) 80.69%), #FFFFFF;
  }
 
- .tryBtn :hover {
+ .tryBtn {
+  
+ }
+ .tryBtn a {
+  background: #674399;
+  color: #fff !important;
+ text-decoration: none;
+ border-radius: 10px;
+ padding: 30px;
+ }
+
+ .tryBtn a:hover {
    background: #936ec6 !important;
  }
 
@@ -93,6 +110,17 @@
    font-weight: lighter;
  }
 
+ .express-starter-div{
+      color: #000000;
+        background: linear-gradient(135deg, rgb(255, 255, 255) 1%, rgb(231, 227, 255) 99%);
+        padding-top: 2em;
+        padding-right: 2em;
+        padding-bottom: 2em;
+        padding-left: 2em;
+ }
+ .header-purple {
+  color: #7f54b3;
+ }
  .helpDivLeft {
    background-color: #f7f6f6;
  }
