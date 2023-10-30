@@ -8,6 +8,21 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
+    <!-- Bootstrap CSS -->
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    /> -->
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -29,8 +44,142 @@
 
     <title>Woo Express - WooCommerce</title>
 
-    <link rel="stylesheet" href="style.css" />
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #e6e6e6;
+      }
+      .site-logo {
+        width: 71px;
+        line-height: 1;
+      }
+      .nav-item2 {
+        padding-right: 3rem;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+      }
+      .navbar .megamenu {
+        padding: 1rem;
+      }
+      .nav-item2:hover {
+        border-bottom: 3px solid purple;
+      }
+      .mega-menu-item {
+        padding: 20px;
+        width: 20rem;
+        font-size: 0.875em;
+        display: block;
+      }
+      .mega-menu-item:hover {
+        background-color: #fafafaf7;
+      }
+      .startedBtn {
+        border: 2px solid #7f54b3;
+        border-radius: 8px;
+        color: #533582;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .loginBtn {
+        color: #533582;
+      }
+      .loginBtn :hover {
+        border: none;
+      }
+
+      .header-block {
+        background: url(images/hero-left-img2.png),
+          url(images/hero-right-img2.png);
+
+        background-repeat: no-repeat, no-repeat;
+        background-position: left, right;
+        background-size: 18%, 18%;
+      }
+      .header {
+        padding-top: 150px;
+
+        background: linear-gradient(#f2edff80, #ffffff);
+      }
+      .tryBtn {
+        background: #674399;
+        color: #fff !important;
+      }
+
+      .tryBtn :hover {
+        background: #936ec6 !important;
+      }
+      .cardAndterm {
+        color: #787c82;
+        font-size: clamp(10px, 0.875rem + ((1vw - 3.2px) * 0.156), 13px);
+        text-align: center;
+        letter-spacing: -0.014em;
+      }
+      .cardAndterm a {
+        color: #674399;
+      }
+      .cardAndterm a:hover {
+        text-decoration: none;
+        color: #936ec6;
+        font-weight: lighter;
+      }
+      .helpDivLeft {
+        background-color: #f7f6f6;
+      }
+      .helpDivRight {
+        background-color: #f6f5ff;
+      }
+
+      .overlay {
+        position: fixed; /* Positioning and size */
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(128, 128, 128, 0.5); /* color */
+        display: none; /* making it hidden by default */
+      }
+      /* ============ desktop view ============ */
+      @media all and (min-width: 992px) {
+        .navbar .has-megamenu {
+          position: static !important;
+        }
+        .navbar .megamenu {
+          left: 0;
+          right: 0;
+          width: 100%;
+          margin-top: 0;
+        }
+      }
+      /* ============ desktop view .end// ============ */
+
+      /* ============ mobile view ============ */
+      @media (max-width: 991px) {
+        .navbar.fixed-top .navbar-collapse,
+        .navbar.sticky-top .navbar-collapse {
+          overflow-y: auto;
+          max-height: 90vh;
+          margin-top: 10px;
+        }
+      }
+      /* ============ mobile view .end// ============ */
+    </style>
     <script type="text/javascript">
+      // document.addEventListener("DOMContentLoaded", function () {
+      //   /////// Prevent closing from click inside dropdown
+      //   document.querySelectorAll(".dropdown-menu").forEach(function (element) {
+      //     element.addEventListener("click", function (e) {
+      //       e.stopPropagation();
+      //       var body = document.getElementById("mainBody");
+      //       // body.setAttribute("class", "overlay");
+      //       body.classList.add("overlay");
+      //       alert(1);
+      //     });
+      //   });
+      // });
+      // DOMContentLoaded  end
       window.addEventListener("DOMContentLoaded", (event) => {
         document
           .querySelector(".dropdown-toggle")
@@ -49,31 +198,9 @@
   <body id="mainBody">
     <!-- section-header.// -->
     <div class="container">
-      <div class="bg-white d-flex justify-content-end pe-3">
-        <ul class="list-inline bg-white topbar">
-          <li class="list-inline-item bg-white">
-            <a href="#"><i class="glyphicon glyphicon-usd"></i>$ USD</a>
-          </li>
-
-          <li class="list-inline-item bg-white">
-            <i class="fa-solid fa-globe"></i>
-            <a href="#">English (United States)</a>
-          </li>
-          <li class="list-inline-item bg-white">
-            <a href="#">Develop on Woo</a>
-          </li>
-          <li class="list-inline-item bg-white">
-            <a href="#">Hire an Expert</a>
-          </li>
-          <li class="list-inline-item bg-white"><a href="#">Get Support</a></li>
-        </ul>
-      </div>
       <nav class="navbar navbar-expand-lg bg-white text-dark">
         <div class="container-fluid text-dark ps-5">
-          <a
-            class="navbar-brand bg-white text-dark site-logo me-5"
-            href="index.html"
-          >
+          <a class="navbar-brand bg-white text-dark site-logo me-5" href="#">
             <svg
               preserveAspectRatio="xMidYMid"
               version="1.1"
@@ -118,14 +245,12 @@
                     <div class="col-lg-3 col-6">
                       <div class="col-megamenu">
                         <div class="mega-menu-item">
-                          <a href="express.html">
-                            <h5>Woo For Merchants</h5>
+                          <h5>Woo For Merchants</h5>
 
-                            <p class="text-muted">
-                              Woo Express offers everything you need to launch a
-                              store in days and keep it growing for years
-                            </p>
-                          </a>
+                          <p class="text-muted">
+                            Woo Express offers everything you need to launch a
+                            store in days and keep it growing for years
+                          </p>
                         </div>
 
                         <div class="mega-menu-item">
@@ -264,9 +389,9 @@
               for your first 3 months*.
             </p>
             <div class="p-4">
-              <div class="tryBtn">
-                <a class="p-3 ps-4 pe-4" href="#"> Try it free </a>
-              </div>
+              <a class="btn tryBtn startedBtn p-2 ps-4 pe-4" href="#">
+                Try it free
+              </a>
               <p class="cardAndterm mt-4">
                 <span>
                   <i class="fa fa-check" style="color: rgb(75, 212, 75)"></i> No
@@ -318,73 +443,7 @@
         </div>
       </div>
     </section>
-    <footer class="container">
-      <div class="footer ps-5 pe-5 bg-white">
-        <div class="row">
-          <div class="col text-start">
-            <h3><strong> WooCommerce</strong></h3>
-            <ul class="footer-ul">
-              <li class="footer-ul">About</li>
-              <li>Press</li>
-              <li>Trademark Guidelines</li>
-              <li>Brand and logo guidelines</li>
-              <li>Contact Us</li>
-            </ul>
-          </div>
 
-          <div class="col text-start">
-            <h3><strong> SELL</strong></h3>
-            <ul>
-              <li>Woo for Merchants</li>
-              <li>Payments</li>
-              <li>No-Code Customization</li>
-              <li>Marketing</li>
-              <li>Shipping</li>
-              <li>Mobile App</li>
-              <li>Enterprise Ecommerce</li>
-              <li>Jetpack for WooCommerce</li>
-              <li>Paid Newsletter Subscriptions</li>
-            </ul>
-          </div>
-          <div class="col text-start">
-            <h3><strong> EXTENSIONS & THEMES</strong></h3>
-            <ul>
-              <li>All Extensions</li>
-              <li>All Themes</li>
-              <li>New</li>
-              <li>Essentials</li>
-              <li>Collections</li>
-              <li>Developed by Woo</li>
-            </ul>
-          </div>
-
-          <div class="col text-start">
-            <h3><strong> BUILD</strong></h3>
-            <ul class="footer-ul">
-              <li>Woo for Developers</li>
-              <li>Developer Resources</li>
-              <li>Build Stores — Become a WooExpert</li>
-              <li>Build Products — Extensions, SaaS, Themes</li>
-            </ul>
-          </div>
-
-          <div class="col text-start">
-            <h3><strong> RESOURCES</strong></h3>
-            <ul class="footer-ul">
-              <li>Blog</li>
-              <li>Documentation</li>
-              <li>Email Newsletter</li>
-              <li>Support</li>
-              <li>Customer Showcase</li>
-              <li>Hire an Expert Agency</li>
-              <li>Support Policy</li>
-              <li>Refund Policy</li>
-              <li>Participate in Customer Research</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
