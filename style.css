@@ -172,7 +172,18 @@ margin: 0;
   padding: 0;
  }
 
-
+.changePasswordOverlay {
+  height: 100%;
+  /* changed for demo */
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .5);
+  overflow-y: hidden;
+  transition: 1s;
+}
 .topbar a {
   text-decoration: none;
   color: black;
@@ -182,6 +193,68 @@ margin: 0;
  .tryWooExpress {
       background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(231, 227, 255) 100%);
       
+ }
+
+ .scroll-animation {
+   opacity: 0;
+   transform: translateY(50px);
+   transition: opacity 1s, transform 1s;
+ }
+
+ .reveal {
+   position: relative;
+   opacity: 0;
+ }
+
+ .reveal.active {
+   opacity: 1;
+ }
+
+ .active.fade-bottom {
+   animation: fade-bottom 1s ease-in;
+ }
+
+ .active.fade-left {
+   animation: fade-left 1s ease-in;
+ }
+
+ .active.fade-right {
+   animation: fade-right 1s ease-in;
+ }
+ @keyframes fade-bottom {
+   0% {
+     transform: translateY(50px);
+     opacity: 0;
+   }
+
+   100% {
+     transform: translateY(0);
+     opacity: 1;
+   }
+ }
+
+ @keyframes fade-left {
+   0% {
+     transform: translateX(-100px);
+     opacity: 0;
+   }
+
+   100% {
+     transform: translateX(0);
+     opacity: 1;
+   }
+ }
+
+ @keyframes fade-right {
+   0% {
+     transform: translateX(100px);
+     opacity: 0;
+   }
+
+   100% {
+     transform: translateX(0);
+     opacity: 1;
+   }
  }
  /* ============ desktop view ============ */
  @media all and (min-width: 992px) {

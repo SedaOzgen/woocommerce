@@ -43,6 +43,24 @@
             alert(1);
           });
       });
+      function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+
     </script>
   </head>
 
@@ -113,7 +131,7 @@
                   data-bs-toggle="dropdown"
                   >Sell
                 </a>
-                <div class="dropdown-menu megamenu" role="menu">
+                <div class="dropdown-menu megamenu " role="menu">
                   <div class="row g-3">
                     <div class="col-lg-3 col-6">
                       <div class="col-megamenu">
@@ -273,10 +291,10 @@
         </div>
       </div>
     </header>
-    <section class="container">
+    <section class="container ">
       <div class="bg-white p-3">
         <p class="text-center fs-2 fw-bolder p-4">Get started for $1</p>
-        <div class="row ps-3 pe-5">
+        <div class="row ps-3 pe-5 reveal fade-bottom">
           <div class="col express-starter-div rounded-3 ms-5 me-2">
             <p class="fs-3 fw-bolder header-purple">Essential</p>
             <p class="text-secondary">
@@ -334,7 +352,7 @@
             </ul>
           </div>
         </div>
-        <div class="row ps-3 pe-5 pt-5">
+        <div class="row ps-3 pe-5 pt-5 reveal fade-bottom">
           <div class="col express-starter-div rounded-3 ms-5 me-2">
             <p class="fs-5 fw-bolder header-purple">Enterprise ecommerce</p>
             <p class="text-secondary">
@@ -345,7 +363,7 @@
         </div>
       </div>
     </section>
-    <section class="container">
+    <section class="container ">
       <div class="text-center bg-white p-3">
         <p class="display-5 fw-bold p-4">Launch in days, grow for years</p>
         <p>
@@ -353,11 +371,12 @@
             src="https://embed-ssl.wistia.com/deliveries/8a0728780166cfbff422040aee09b94c.jpg?image_play_button_size=2x&amp;image_crop_resized=960x540&amp;image_play_button=1&amp;image_play_button_color=694397e0"
             width="845"
             style="width: 845px"
+            class="reveal fade-bottom"
           />
         </p>
       </div>
     </section>
-    <section class="container">
+    <section class="container ">
       <div class="text-center bg-white p-3">
         <p class="display-5 fw-bold p-4">Brands that love Woo 💜</p>
         <p>
@@ -365,17 +384,19 @@
             src="images/woo-brands1@2x.jpg"
             width="2000"
             style="width: 100%"
+             class="reveal fade-bottom"
           />
         </p>
       </div>
     </section>
-    <section class="container">
+    <section class="container ">
       <div class="text-center bg-white p-3">
         <p>
           <img
             src="images/woo-brands2@2x.jpg"
             width="2000"
             style="width: 100%"
+            class="reveal fade-bottom"
           />
         </p>
       </div>
@@ -387,12 +408,14 @@
                 src="images/woo-brandsA@2x-1.webp"
                 alt=""
             width="450"
+             class="reveal fade-bottom"
             />
      
             <img
                 src="images/woo-brandsB@2x-1.webp"
             alt=""
                 width="450"
+                 class="reveal fade-bottom"
             />
             </div>
         
@@ -402,17 +425,17 @@
     <section class="container">
 
     <div class="d-flex justify-content-center  bg-white pe-5 ps-5 pt-3">
-        <div style="width: 70%;">
+        <div style="width: 70%;"   class="reveal fade-bottom">
             <p class="quata p-3">“Our website had to load quickly, run smoothly, and avoid checkout friction. So we built it on Woo, naturally.”</p>
         </div>
         </div>
         <div class="text-center bg-white pb-5">
-            <img class="rounded-circle" src="images/1679389208677.jpeg" width="75" alt="">
-            <span class="ps-3"> Seda Özgen Selamoğlu</span> <u>sedaozgen.com</u>
+            <img class="rounded-circle reveal fade-left" src="images/1679389208677.jpeg" width="75"    alt="">
+            <span class="ps-3 reveal fade-right"> Seda Özgen Selamoğlu  <u>sedaozgen.com</u></span>
         </div>
     </section>
     <section class="container">
-        <div class="tryWooExpress text-center pb-5">
+        <div class="tryWooExpress text-center pb-5 ">
 <p class="fs-2 fw-bolder p-3">Try Woo Express for free!</p>
 <p class="">Get Woo Express for 14 days at zero cost to see if it’s right for your business</p>
 <p class="">– no credit card required!</p>
